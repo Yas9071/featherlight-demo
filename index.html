@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Numi</title>
+
+  <!-- Featherlight CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #FFEBD3;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px;
+    }
+
+    .logo img {
+      width: 50px;
+      opacity: 0.95;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #666;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      display: block;
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: 0.3s;
+    }
+
+    .gallery-item:hover .overlay {
+      opacity: 1;
+    }
+
+    .overlay span {
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .section {
+      margin-top: 40px;
+      background: #f0f0f0;
+      padding: 25px;
+      border-radius: 8px;
+    }
+
+    .section h2 {
+      text-align: center;
+    }
+
+    .section p {
+      line-height: 1.6;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="logo">
+      <img src="numi-logo.png" alt="Numi Logo">
+    </div>
+
+    <h1>Numi</h1>
+
+    <p class="subtitle">
+      Numi was made to bridge the gap between abstract numbers and physical quantity. It is an interactive toolkit that uses camera-based hand tracking to turn math into a tangible experience.
+    </p>
+
+    <div class="gallery">
+
+      <div class="gallery-item">
+        <a href="numi.png" data-featherlight="image">
+          <img src="numi.png" alt="Numi Interface">
+          <div class="overlay"><span>Click to View</span></div>
+        </a>
+      </div>
+
+      <div class="gallery-item">
+        <a href="numi3.png" data-featherlight="image">
+          <img src="numi3.png" alt="Numi Prototype">
+          <div class="overlay"><span>Click to View</span></div>
+        </a>
+      </div>
+
+      <div class="gallery-item">
+        <a href="numi2.png" data-featherlight="image">
+          <img src="numi2.png" alt="Numi Learning Screen">
+          <div class="overlay"><span>Click to View</span></div>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="section">
+      <h2>Why Numi Matters</h2>
+      <p>
+        Many children struggle to understand numbers because they are often taught as abstract symbols rather than real concepts. Numi bridges this gap by turning numbers into physical, interactive experiences. By using hand gestures and visual feedback, learners can connect movement with meaning, making math feel more natural and less intimidating.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Key Features</h2>
+      <p>• Gesture-based number input using hand tracking</p>
+      <p>• Real-time visual feedback</p>
+      <p>• Simple and intuitive interface for children</p>
+      <p>• Interactive learning through play</p>
+    </div>
+
+    <div class="section">
+      <h2>Design Rationale</h2>
+      <p>
+        I chose the Featherlight JavaScript plugin because it creates a simple lightbox interaction that allows users to click on images and view them in a larger format. This works well for Numi because the project is visual, and the plugin helps present interface screens clearly without making the page feel crowded.
+      </p>
+      <p>
+        The plugin benefits this proof-of-concept by improving the user experience. Instead of placing large images directly on the page, Featherlight allows the gallery to stay clean while still giving users the option to explore each screen in more detail.
+      </p>
+      <p>
+        Beyond this proof-of-concept, this plugin could be used in a full Numi website to showcase prototype screens, learning activities, product features, or student progress examples. It could also support storytelling by letting users explore different stages of the learning experience one screen at a time.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Featherlight JS -->
+  <script src="https://cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js"></script>
+
+</body>
+</html>
